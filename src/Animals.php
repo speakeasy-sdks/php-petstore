@@ -31,7 +31,7 @@ class Animals
      * @return \php\petstore\Models\Operations\CreateAnimalResponse
      */
 	public function createAnimal(
-        \php\petstore\Models\Operations\CreateAnimalRequestBody $request,
+        ?\php\petstore\Models\Operations\CreateAnimalRequestBody $request,
         \php\petstore\Models\Operations\CreateAnimalSecurity $security,
     ): \php\petstore\Models\Operations\CreateAnimalResponse
     {
@@ -40,7 +40,9 @@ class Animals
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -79,7 +81,7 @@ class Animals
      * @return \php\petstore\Models\Operations\CreateLivingThingsResponse
      */
 	public function createLivingThings(
-        \php\petstore\Models\Shared\ComplexObject $request,
+        ?\php\petstore\Models\Shared\ComplexObject $request,
     ): \php\petstore\Models\Operations\CreateLivingThingsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -87,7 +89,9 @@ class Animals
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -125,7 +129,7 @@ class Animals
      * @return \php\petstore\Models\Operations\DeleteAnimalsByIdResponse
      */
 	public function deleteAnimalsById(
-        \php\petstore\Models\Operations\DeleteAnimalsByIdRequest $request,
+        ?\php\petstore\Models\Operations\DeleteAnimalsByIdRequest $request,
     ): \php\petstore\Models\Operations\DeleteAnimalsByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -165,7 +169,7 @@ class Animals
      * @return \php\petstore\Models\Operations\GetAllAnimalsResponse
      */
 	public function getAllAnimals(
-        \php\petstore\Models\Operations\GetAllAnimalsRequest $request,
+        ?\php\petstore\Models\Operations\GetAllAnimalsRequest $request,
     ): \php\petstore\Models\Operations\GetAllAnimalsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -210,7 +214,7 @@ class Animals
      * @return \php\petstore\Models\Operations\GetAllLivingThingsResponse
      */
 	public function getAllLivingThings(
-        \php\petstore\Models\Operations\GetAllLivingThingsRequest $request,
+        ?\php\petstore\Models\Operations\GetAllLivingThingsRequest $request,
     ): \php\petstore\Models\Operations\GetAllLivingThingsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -250,7 +254,7 @@ class Animals
      * @return \php\petstore\Models\Operations\GetAnimalsByIdResponse
      */
 	public function getAnimalsById(
-        \php\petstore\Models\Operations\GetAnimalsByIdRequest $request,
+        ?\php\petstore\Models\Operations\GetAnimalsByIdRequest $request,
         \php\petstore\Models\Operations\GetAnimalsByIdSecurity $security,
     ): \php\petstore\Models\Operations\GetAnimalsByIdResponse
     {
@@ -259,7 +263,9 @@ class Animals
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "animals", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\php\petstore\Models\Operations\GetAnimalsByIdRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
@@ -300,7 +306,7 @@ class Animals
      * @return \php\petstore\Models\Operations\UpdateAnimalsByIdResponse
      */
 	public function updateAnimalsById(
-        \php\petstore\Models\Operations\UpdateAnimalsByIdRequest $request,
+        ?\php\petstore\Models\Operations\UpdateAnimalsByIdRequest $request,
         \php\petstore\Models\Operations\UpdateAnimalsByIdSecurity $security,
     ): \php\petstore\Models\Operations\UpdateAnimalsByIdResponse
     {
@@ -309,7 +315,9 @@ class Animals
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "animals", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         

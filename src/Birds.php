@@ -30,7 +30,7 @@ class Birds
      * @return \php\petstore\Models\Operations\CreateLivingThingsResponse
      */
 	public function createLivingThings(
-        \php\petstore\Models\Shared\ComplexObject $request,
+        ?\php\petstore\Models\Shared\ComplexObject $request,
     ): \php\petstore\Models\Operations\CreateLivingThingsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -38,7 +38,9 @@ class Birds
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -76,7 +78,7 @@ class Birds
      * @return \php\petstore\Models\Operations\CreateNewBirdResponse
      */
 	public function createNewBird(
-        \php\petstore\Models\Shared\NestedBird $request,
+        ?\php\petstore\Models\Shared\NestedBird $request,
     ): \php\petstore\Models\Operations\CreateNewBirdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -84,7 +86,9 @@ class Birds
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -116,7 +120,7 @@ class Birds
      * @return \php\petstore\Models\Operations\GetAllBirdsResponse
      */
 	public function getAllBirds(
-        array $request,
+        ?array $request,
     ): \php\petstore\Models\Operations\GetAllBirdsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -124,7 +128,9 @@ class Birds
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -162,7 +168,7 @@ class Birds
      * @return \php\petstore\Models\Operations\GetAllLivingThingsResponse
      */
 	public function getAllLivingThings(
-        \php\petstore\Models\Operations\GetAllLivingThingsRequest $request,
+        ?\php\petstore\Models\Operations\GetAllLivingThingsRequest $request,
     ): \php\petstore\Models\Operations\GetAllLivingThingsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
