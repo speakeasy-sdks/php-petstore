@@ -70,7 +70,7 @@ try {
 ## Available Resources and Operations
 
 
-### [animals](docs/sdks/animals/README.md)
+### [Animals](docs/sdks/animals/README.md)
 
 * [createAnimal](docs/sdks/animals/README.md#createanimal) - create an animal
 * [createLivingThings](docs/sdks/animals/README.md#createlivingthings) - create a living thing
@@ -80,7 +80,7 @@ try {
 * [getAnimalsById](docs/sdks/animals/README.md#getanimalsbyid) - Get Animal
 * [updateAnimalsById](docs/sdks/animals/README.md#updateanimalsbyid) - Update Animal
 
-### [birds](docs/sdks/birds/README.md)
+### [Birds](docs/sdks/birds/README.md)
 
 * [createLivingThings](docs/sdks/birds/README.md#createlivingthings) - create a living thing
 * [createNewBird](docs/sdks/birds/README.md#createnewbird) - Create new Bird

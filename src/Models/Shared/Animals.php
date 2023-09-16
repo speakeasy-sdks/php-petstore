@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace php\petstore\Models\Shared;
 
 
-/**
- * Animals - OK
- * 
- * @package php\petstore\Models\Shared
- * @access public
- */
 class Animals
 {
 	#[\JMS\Serializer\Annotation\SerializedName('age')]

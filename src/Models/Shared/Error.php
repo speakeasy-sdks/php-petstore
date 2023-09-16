@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace php\petstore\Models\Shared;
 
 
-/**
- * Error - Internal Server Error
- * 
- * @package php\petstore\Models\Shared
- * @access public
- */
 class Error
 {
 	#[\JMS\Serializer\Annotation\SerializedName('code')]

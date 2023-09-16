@@ -1,4 +1,4 @@
-# birds
+# Birds
 
 ## Overview
 
@@ -37,22 +37,18 @@ try {
     $request->data = new ComplexObjectData();
     $request->data->animal = [
         new Animals(),
-        new Animals(),
     ];
     $request->data->birds = new ComplexObjectDataBirds();
     $request->data->birds->food = [
-        'dignissimos',
-        'eaque',
-        'quis',
+        'corporis',
     ];
-    $request->data->birds->id = '3202c73d-5fe9-4b90-8289-09b3fe49a8d9';
-    $request->data->birds->name = 'Randolph Wintheiser';
-    $request->data->createdDate = 212390;
-    $request->data->updatedDate = 222443;
-    $request->meta = new Pagination();
-    $request->meta->hasMore = false;
-    $request->meta->pageNumber = 218749;
-    $request->name = 'Marshall Ritchie';
+    $request->data->birds->id = 'fbb25870-5320-42c7-bd5f-e9b90c28909b';
+    $request->data->birds->name = 'Ollie Watsica';
+    $request->data->createdDate = 'deleniti';
+    $request->data->updatedDate = 5899.1;
+    $request->meta = new ComplexObjectMeta2();
+    $request->meta->pageNumber = 'libero';
+    $request->name = 'Alex Luettgen';
 
     $response = $sdk->birds->createLivingThings($request);
 
@@ -104,23 +100,23 @@ $sdk = Pb::builder()
 try {
     $request = new NestedBird();
     $request->age = new NestedBirdAge();
-    $request->age->amount = 9702.37;
+    $request->age->amount = 2098.43;
     $request->age->unit = NestedBirdAgeUnit::Months;
     $request->flight = new NestedBirdFlight();
     $request->flight->canFly = false;
     $request->flight->wings = new NestedBirdFlightWings();
-    $request->flight->wings->count = 680545;
+    $request->flight->wings->count = 186193;
     $request->flight->wings->span = new NestedBirdFlightWingsSpan();
-    $request->flight->wings->span->amount = 2543.56;
-    $request->flight->wings->span->unit = 'veritatis';
+    $request->flight->wings->span->amount = 2187.49;
+    $request->flight->wings->span->unit = 'hic';
     $request->food = [
-        'ipsa',
+        'excepturi',
     ];
-    $request->id = '674ebf69-280d-41ba-b7a8-9ebf737ae420';
+    $request->id = 'b77f3a41-0067-44eb-b692-80d1ba77a89e';
     $request->location = [
         new NestedBirdLocation(),
     ];
-    $request->name = 'Tomas Hammes';
+    $request->name = 'Emmett Kovacek';
 
     $response = $sdk->birds->createNewBird($request);
 
@@ -164,8 +160,6 @@ $sdk = Pb::builder()
 
 try {
     $request = [
-        new Birds(),
-        new Birds(),
         new Birds(),
     ]
 
@@ -212,9 +206,7 @@ $sdk = Pb::builder()
 try {
     $request = new GetAllLivingThingsRequest();
     $request->filter = [
-        'minima',
-        'repellendus',
-        'totam',
+        'id',
     ];
 
     $response = $sdk->birds->getAllLivingThings($request);
