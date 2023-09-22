@@ -30,8 +30,6 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```php
 <?php
 
@@ -39,23 +37,20 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \php\petstore\Pb;
+use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Operations\CreateAnimalRequestBody;
-use \php\petstore\Models\Operations\CreateAnimalSecurity;
 
 $sdk = Pb::builder()
     ->build();
 
 try {
     $request = new CreateAnimalRequestBody();
-    $request->age = 548814;
-    $request->color = 'provident';
-    $request->id = 'bd9d8d69-a674-4e0f-867c-c8796ed151a0';
-    $request->name = 'Estelle Will';
+    $request->age = 870013;
+    $request->color = 'at';
+    $request->id = 'f7cc78ca-1ba9-428f-8816-742cb7392059';
+    $request->name = 'Sheryl Fadel';
 
-    $requestSecurity = new CreateAnimalSecurity();
-    $requestSecurity->key1 = '';
-
-    $response = $sdk->animals->createAnimal($request, $requestSecurity);
+    $response = $sdk->animals->createAnimal($request);
 
     if ($response->animals !== null) {
         // handle response
@@ -87,6 +82,18 @@ try {
 * [getAllBirds](docs/sdks/birds/README.md#getallbirds) - Get Birds
 * [getAllLivingThings](docs/sdks/birds/README.md#getalllivingthings) - Get All living things
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

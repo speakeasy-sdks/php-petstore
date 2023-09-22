@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace php\petstore\Models\Operations;
+namespace php\petstore\Models\Shared;
 
 use \php\petstore\Utils\SpeakeasyMetadata;
-class CreateAnimalSecurity
+class Security
 {
 	#[SpeakeasyMetadata('security:scheme=true,type=oauth2,name=Authorization')]
     public string $key1;

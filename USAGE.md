@@ -8,8 +8,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \php\petstore\Pb;
+use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Operations\CreateAnimalRequestBody;
-use \php\petstore\Models\Operations\CreateAnimalSecurity;
 
 $sdk = Pb::builder()
     ->build();
@@ -21,10 +21,7 @@ try {
     $request->id = 'bd9d8d69-a674-4e0f-867c-c8796ed151a0';
     $request->name = 'Estelle Will';
 
-    $requestSecurity = new CreateAnimalSecurity();
-    $requestSecurity->key1 = '';
-
-    $response = $sdk->animals->createAnimal($request, $requestSecurity);
+    $response = $sdk->animals->createAnimal($request);
 
     if ($response->animals !== null) {
         // handle response

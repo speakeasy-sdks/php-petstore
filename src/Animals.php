@@ -27,12 +27,10 @@ class Animals
      * Post animals description
      * 
      * @param \php\petstore\Models\Operations\CreateAnimalRequestBody $request
-     * @param \php\petstore\Models\Operations\CreateAnimalSecurity $security
      * @return \php\petstore\Models\Operations\CreateAnimalResponse
      */
 	public function createAnimal(
         ?\php\petstore\Models\Operations\CreateAnimalRequestBody $request,
-        \php\petstore\Models\Operations\CreateAnimalSecurity $security,
     ): \php\petstore\Models\Operations\CreateAnimalResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -46,8 +44,7 @@ class Animals
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -95,7 +92,7 @@ class Animals
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -139,7 +136,7 @@ class Animals
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -180,7 +177,7 @@ class Animals
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -225,7 +222,7 @@ class Animals
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -250,12 +247,10 @@ class Animals
      * Get an animal
      * 
      * @param \php\petstore\Models\Operations\GetAnimalsByIdRequest $request
-     * @param \php\petstore\Models\Operations\GetAnimalsByIdSecurity $security
      * @return \php\petstore\Models\Operations\GetAnimalsByIdResponse
      */
 	public function getAnimalsById(
         ?\php\petstore\Models\Operations\GetAnimalsByIdRequest $request,
-        \php\petstore\Models\Operations\GetAnimalsByIdSecurity $security,
     ): \php\petstore\Models\Operations\GetAnimalsByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -270,8 +265,7 @@ class Animals
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -302,12 +296,10 @@ class Animals
      * Update the animal object
      * 
      * @param \php\petstore\Models\Operations\UpdateAnimalsByIdRequest $request
-     * @param \php\petstore\Models\Operations\UpdateAnimalsByIdSecurity $security
      * @return \php\petstore\Models\Operations\UpdateAnimalsByIdResponse
      */
 	public function updateAnimalsById(
         ?\php\petstore\Models\Operations\UpdateAnimalsByIdRequest $request,
-        \php\petstore\Models\Operations\UpdateAnimalsByIdSecurity $security,
     ): \php\petstore\Models\Operations\UpdateAnimalsByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -321,8 +313,7 @@ class Animals
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

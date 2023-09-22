@@ -1,4 +1,4 @@
-# GetAnimalsByIdSecurity
+# Security
 
 
 ## Fields

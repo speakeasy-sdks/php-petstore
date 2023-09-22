@@ -24,6 +24,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \php\petstore\Pb;
+use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Shared\ComplexObject;
 use \php\petstore\Models\Shared\ComplexObjectData;
 use \php\petstore\Models\Shared\Animals;
@@ -40,15 +41,16 @@ try {
     ];
     $request->data->birds = new ComplexObjectDataBirds();
     $request->data->birds->food = [
-        'corporis',
+        'deleniti',
     ];
-    $request->data->birds->id = 'fbb25870-5320-42c7-bd5f-e9b90c28909b';
-    $request->data->birds->name = 'Ollie Watsica';
-    $request->data->createdDate = 'deleniti';
-    $request->data->updatedDate = 5899.1;
-    $request->meta = new ComplexObjectMeta2();
-    $request->meta->pageNumber = 'libero';
-    $request->name = 'Alex Luettgen';
+    $request->data->birds->id = 'd9cbf486-3332-43f9-b77f-3a4100674ebf';
+    $request->data->birds->name = 'Faye Daugherty PhD';
+    $request->data->createdDate = 743835;
+    $request->data->updatedDate = 4785.96;
+    $request->meta = new Pagination();
+    $request->meta->hasMore = false;
+    $request->meta->pageNumber = 677082;
+    $request->name = 'Arturo Treutel';
 
     $response = $sdk->birds->createLivingThings($request);
 
@@ -85,6 +87,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \php\petstore\Pb;
+use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Shared\NestedBird;
 use \php\petstore\Models\Shared\NestedBirdAge;
 use \php\petstore\Models\Shared\NestedBirdAgeUnit;
@@ -100,23 +103,23 @@ $sdk = Pb::builder()
 try {
     $request = new NestedBird();
     $request->age = new NestedBirdAge();
-    $request->age->amount = 2098.43;
+    $request->age->amount = 4694.97;
     $request->age->unit = NestedBirdAgeUnit::Months;
     $request->flight = new NestedBirdFlight();
     $request->flight->canFly = false;
     $request->flight->wings = new NestedBirdFlightWings();
-    $request->flight->wings->count = 186193;
+    $request->flight->wings->count = 456015;
     $request->flight->wings->span = new NestedBirdFlightWingsSpan();
-    $request->flight->wings->span->amount = 2187.49;
-    $request->flight->wings->span->unit = 'hic';
+    $request->flight->wings->span->amount = 6630.78;
+    $request->flight->wings->span->unit = 'saepe';
     $request->food = [
-        'excepturi',
+        'eius',
     ];
-    $request->id = 'b77f3a41-0067-44eb-b692-80d1ba77a89e';
+    $request->id = '203ce5e6-a95d-48a0-9446-ce2af7a73cf3';
     $request->location = [
         new NestedBirdLocation(),
     ];
-    $request->name = 'Emmett Kovacek';
+    $request->name = 'Tomas Funk';
 
     $response = $sdk->birds->createNewBird($request);
 
@@ -153,6 +156,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \php\petstore\Pb;
+use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Shared\Birds;
 
 $sdk = Pb::builder()
@@ -198,6 +202,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \php\petstore\Pb;
+use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Operations\GetAllLivingThingsRequest;
 
 $sdk = Pb::builder()
@@ -206,7 +211,7 @@ $sdk = Pb::builder()
 try {
     $request = new GetAllLivingThingsRequest();
     $request->filter = [
-        'id',
+        'sapiente',
     ];
 
     $response = $sdk->birds->getAllLivingThings($request);

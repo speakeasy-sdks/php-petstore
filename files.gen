@@ -21,7 +21,6 @@ src/Utils/SecurityClient.php
 src/Utils/SecurityMetadata.php
 src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
-src/Models/Operations/CreateAnimalSecurity.php
 src/Models/Operations/CreateAnimalRequestBody.php
 src/Models/Operations/CreateAnimalResponse.php
 src/Models/Operations/CreateLivingThingsResponse.php
@@ -31,10 +30,8 @@ src/Models/Operations/GetAllAnimalsRequest.php
 src/Models/Operations/GetAllAnimalsResponse.php
 src/Models/Operations/GetAllLivingThingsRequest.php
 src/Models/Operations/GetAllLivingThingsResponse.php
-src/Models/Operations/GetAnimalsByIdSecurity.php
 src/Models/Operations/GetAnimalsByIdRequest.php
 src/Models/Operations/GetAnimalsByIdResponse.php
-src/Models/Operations/UpdateAnimalsByIdSecurity.php
 src/Models/Operations/UpdateAnimalsByIdRequest.php
 src/Models/Operations/UpdateAnimalsByIdResponse.php
 src/Models/Operations/CreateNewBird200ApplicationJSONMeta.php
@@ -57,11 +54,8 @@ src/Models/Shared/NestedBirdLocationGeography.php
 src/Models/Shared/NestedBirdLocation.php
 src/Models/Shared/NestedBird.php
 src/Models/Shared/Birds.php
-docs/sdks/pb/README.md
-docs/sdks/animals/README.md
-docs/sdks/birds/README.md
+src/Models/Shared/Security.php
 USAGE.md
-docs/models/operations/CreateAnimalSecurity.md
 docs/models/operations/CreateAnimalRequestBody.md
 docs/models/operations/CreateAnimalResponse.md
 docs/models/operations/CreateLivingThingsResponse.md
@@ -71,10 +65,8 @@ docs/models/operations/GetAllAnimalsRequest.md
 docs/models/operations/GetAllAnimalsResponse.md
 docs/models/operations/GetAllLivingThingsRequest.md
 docs/models/operations/GetAllLivingThingsResponse.md
-docs/models/operations/GetAnimalsByIdSecurity.md
 docs/models/operations/GetAnimalsByIdRequest.md
 docs/models/operations/GetAnimalsByIdResponse.md
-docs/models/operations/UpdateAnimalsByIdSecurity.md
 docs/models/operations/UpdateAnimalsByIdRequest.md
 docs/models/operations/UpdateAnimalsByIdResponse.md
 docs/models/operations/CreateNewBird200ApplicationJSONMeta.md
@@ -97,4 +89,8 @@ docs/models/shared/NestedBirdLocationGeography.md
 docs/models/shared/NestedBirdLocation.md
 docs/models/shared/NestedBird.md
 docs/models/shared/Birds.md
+docs/models/shared/Security.md
+docs/sdks/pb/README.md
+docs/sdks/animals/README.md
+docs/sdks/birds/README.md
 .gitattributes
