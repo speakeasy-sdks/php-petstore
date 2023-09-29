@@ -16,10 +16,10 @@ $sdk = Pb::builder()
 
 try {
     $request = new CreateAnimalRequestBody();
-    $request->age = 548814;
-    $request->color = 'provident';
-    $request->id = 'bd9d8d69-a674-4e0f-867c-c8796ed151a0';
-    $request->name = 'Estelle Will';
+    $request->age = 239780;
+    $request->color = 'maroon';
+    $request->id = '<ID>';
+    $request->name = 'Buckinghamshire TLS';
 
     $response = $sdk->animals->createAnimal($request);
 

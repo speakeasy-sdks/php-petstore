@@ -1,4 +1,5 @@
 # Animals
+(*animals*)
 
 ## Overview
 
@@ -35,10 +36,10 @@ $sdk = Pb::builder()
 
 try {
     $request = new CreateAnimalRequestBody();
-    $request->age = 943749;
-    $request->color = 'saepe';
-    $request->id = 'a7596eb1-0faa-4a23-92c5-955907aff1a3';
-    $request->name = 'Carlos Ziemann';
+    $request->age = 239780;
+    $request->color = 'maroon';
+    $request->id = '<ID>';
+    $request->name = 'Buckinghamshire TLS';
 
     $response = $sdk->animals->createAnimal($request);
 
@@ -92,16 +93,15 @@ try {
     ];
     $request->data->birds = new ComplexObjectDataBirds();
     $request->data->birds->food = [
-        'numquam',
+        'Mesquite',
     ];
-    $request->data->birds->id = '67739251-aa52-4c3f-9ad0-19da1ffe78f0';
-    $request->data->birds->name = 'Mr. Jared Ritchie';
-    $request->data->createdDate = 979587;
-    $request->data->updatedDate = 359444;
-    $request->meta = new Pagination();
-    $request->meta->hasMore = false;
-    $request->meta->pageNumber = 480894;
-    $request->name = 'Maryann Hamill';
+    $request->data->birds->id = '<ID>';
+    $request->data->birds->name = 'loyalty Officer withdrawal';
+    $request->data->createdDate = 'architect directional Chicken';
+    $request->data->updatedDate = 5811.23;
+    $request->meta = new ComplexObjectMeta2();
+    $request->meta->pageNumber = 'North Fish Hafnium';
+    $request->name = 'Metrics calculate';
 
     $response = $sdk->animals->createLivingThings($request);
 
@@ -146,7 +146,7 @@ $sdk = Pb::builder()
 
 try {
     $request = new DeleteAnimalsByIdRequest();
-    $request->id = 'e13b99d4-88e1-4e91-a450-ad2abd442698';
+    $request->id = '<ID>';
 
     $response = $sdk->animals->deleteAnimalsById($request);
 
@@ -191,10 +191,10 @@ $sdk = Pb::builder()
 
 try {
     $request = new GetAllAnimalsRequest();
-    $request->age = 'perferendis';
-    $request->color = 'magni';
-    $request->id = 'd502a94b-b4f6-43c9-a9e9-a3efa77dfb14';
-    $request->name = 'Irving Jenkins';
+    $request->age = 'Avon';
+    $request->color = 'turquoise';
+    $request->id = '<ID>';
+    $request->name = 'plum';
 
     $response = $sdk->animals->getAllAnimals($request);
 
@@ -240,7 +240,7 @@ $sdk = Pb::builder()
 try {
     $request = new GetAllLivingThingsRequest();
     $request->filter = [
-        'accusamus',
+        'qua',
     ];
 
     $response = $sdk->animals->getAllLivingThings($request);
@@ -288,12 +288,12 @@ $sdk = Pb::builder()
 try {
     $request = new GetAnimalsByIdRequest();
     $request->animals = new Animals();
-    $request->animals->age = 249796;
-    $request->animals->color = 'occaecati';
-    $request->animals->id = '5efb9ba8-8f3a-4669-9707-4ba4469b6e21';
-    $request->animals->name = 'Frances Marks';
-    $request->id = '890afa56-3e25-416f-a4c8-b711e5b7fd2e';
-    $request->perPage = 868126;
+    $request->animals->age = 942154;
+    $request->animals->color = 'plum';
+    $request->animals->id = '<ID>';
+    $request->animals->name = 'enhance product';
+    $request->id = '<ID>';
+    $request->perPage = 208636;
 
     $response = $sdk->animals->getAnimalsById($request);
 
@@ -340,11 +340,11 @@ $sdk = Pb::builder()
 try {
     $request = new UpdateAnimalsByIdRequest();
     $request->animals = new Animals();
-    $request->animals->age = 37559;
-    $request->animals->color = 'consequuntur';
-    $request->animals->id = '8921cddc-6926-401f-b576-b0d5f0d30c5f';
-    $request->animals->name = 'Robin D'Amore';
-    $request->id = '7053202c-73d5-4fe9-b90c-28909b3fe49a';
+    $request->animals->age = 15412;
+    $request->animals->color = 'ivory';
+    $request->animals->id = '<ID>';
+    $request->animals->name = 'index Elizabeth Fish';
+    $request->id = '<ID>';
 
     $response = $sdk->animals->updateAnimalsById($request);
 

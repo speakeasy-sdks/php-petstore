@@ -45,10 +45,10 @@ $sdk = Pb::builder()
 
 try {
     $request = new CreateAnimalRequestBody();
-    $request->age = 870013;
-    $request->color = 'at';
-    $request->id = 'f7cc78ca-1ba9-428f-8816-742cb7392059';
-    $request->name = 'Sheryl Fadel';
+    $request->age = 239780;
+    $request->color = 'maroon';
+    $request->id = '<ID>';
+    $request->name = 'Buckinghamshire TLS';
 
     $response = $sdk->animals->createAnimal($request);
 
@@ -65,7 +65,7 @@ try {
 ## Available Resources and Operations
 
 
-### [Animals](docs/sdks/animals/README.md)
+### [animals](docs/sdks/animals/README.md)
 
 * [createAnimal](docs/sdks/animals/README.md#createanimal) - create an animal
 * [createLivingThings](docs/sdks/animals/README.md#createlivingthings) - create a living thing
@@ -75,7 +75,7 @@ try {
 * [getAnimalsById](docs/sdks/animals/README.md#getanimalsbyid) - Get Animal
 * [updateAnimalsById](docs/sdks/animals/README.md#updateanimalsbyid) - Update Animal
 
-### [Birds](docs/sdks/birds/README.md)
+### [birds](docs/sdks/birds/README.md)
 
 * [createLivingThings](docs/sdks/birds/README.md#createlivingthings) - create a living thing
 * [createNewBird](docs/sdks/birds/README.md#createnewbird) - Create new Bird
