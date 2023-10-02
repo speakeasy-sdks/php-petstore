@@ -80,7 +80,6 @@ use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Shared\ComplexObject;
 use \php\petstore\Models\Shared\ComplexObjectData;
 use \php\petstore\Models\Shared\Animals;
-use \php\petstore\Models\Shared\ComplexObjectDataBirds;
 
 $sdk = Pb::builder()
     ->build();
@@ -91,17 +90,15 @@ try {
     $request->data->animal = [
         new Animals(),
     ];
-    $request->data->birds = new ComplexObjectDataBirds();
-    $request->data->birds->food = [
-        'Mesquite',
+    $request->data->birds = [
+        'input',
     ];
-    $request->data->birds->id = '<ID>';
-    $request->data->birds->name = 'loyalty Officer withdrawal';
-    $request->data->createdDate = 'architect directional Chicken';
-    $request->data->updatedDate = 5811.23;
-    $request->meta = new ComplexObjectMeta2();
-    $request->meta->pageNumber = 'North Fish Hafnium';
-    $request->name = 'Metrics calculate';
+    $request->data->createdDate = 248447;
+    $request->data->updatedDate = 6866.6;
+    $request->meta = new Pagination();
+    $request->meta->hasMore = false;
+    $request->meta->pageNumber = 450603;
+    $request->name = 'ruddy architect';
 
     $response = $sdk->animals->createLivingThings($request);
 
@@ -245,7 +242,7 @@ try {
 
     $response = $sdk->animals->getAllLivingThings($request);
 
-    if ($response->getAllLivingThings200ApplicationJSONObject !== null) {
+    if ($response->getAllLivingThings200ApplicationJSONOneOf !== null) {
         // handle response
     }
 } catch (Exception $e) {

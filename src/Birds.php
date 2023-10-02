@@ -191,7 +191,7 @@ class Birds
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getAllLivingThings200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+                $response->getAllLivingThings200ApplicationJSONOneOf = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
             }
         }
 

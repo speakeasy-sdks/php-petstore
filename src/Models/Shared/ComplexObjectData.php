@@ -22,9 +22,9 @@ class ComplexObjectData
     public ?array $animal = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('birds')]
-    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\ComplexObjectDataBirds')]
+    #[\JMS\Serializer\Annotation\Type('mixed')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ComplexObjectDataBirds $birds = null;
+    public mixed $birds = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('createdDate')]
     #[\JMS\Serializer\Annotation\Type('mixed')]

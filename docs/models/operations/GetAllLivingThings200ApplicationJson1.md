@@ -1,0 +1,9 @@
+# GetAllLivingThings200ApplicationJSON1
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `birds`                                                                                                            | array<[\php\petstore\Models\Shared\Birds](../../models/shared/Birds.md)>                                           | :heavy_minus_sign:                                                                                                 | N/A                                                                                                                |
+| `meta`                                                                                                             | [?GetAllLivingThings200ApplicationJSON1Meta](../../models/operations/GetAllLivingThings200ApplicationJson1Meta.md) | :heavy_minus_sign:                                                                                                 | N/A                                                                                                                |
