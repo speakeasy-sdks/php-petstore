@@ -90,15 +90,11 @@ try {
     $request->data->animal = [
         new Animals(),
     ];
-    $request->data->birds = [
-        'input',
-    ];
-    $request->data->createdDate = 248447;
-    $request->data->updatedDate = 6866.6;
-    $request->meta = new Pagination();
-    $request->meta->hasMore = false;
-    $request->meta->pageNumber = 450603;
-    $request->name = 'ruddy architect';
+    $request->data->birds = 'Mesquite';
+    $request->data->createdDate = 'joule';
+    $request->data->updatedDate = 'Granite';
+    $request->meta = 'Officer';
+    $request->name = 'Tala female';
 
     $response = $sdk->animals->createLivingThings($request);
 
