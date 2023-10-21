@@ -30,7 +30,11 @@ use \php\petstore\Models\Shared\ComplexObject;
 use \php\petstore\Models\Shared\ComplexObjectData;
 use \php\petstore\Models\Shared\Animals;
 
+$security = new Security();
+$security->key1 = '';
+
 $sdk = Pb::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -39,11 +43,11 @@ try {
     $request->data->animal = [
         new Animals(),
     ];
-    $request->data->birds = 'Mesquite';
-    $request->data->createdDate = 'joule';
-    $request->data->updatedDate = 'Granite';
-    $request->meta = 'Officer';
-    $request->name = 'Tala female';
+    $request->data->birds = 'string';
+    $request->data->createdDate = 'string';
+    $request->data->updatedDate = 'string';
+    $request->meta = 'string';
+    $request->name = 'string';
 
     $response = $sdk->birds->createLivingThings($request);
 
@@ -90,7 +94,11 @@ use \php\petstore\Models\Shared\NestedBirdFlightWingsSpan;
 use \php\petstore\Models\Shared\NestedBirdLocation;
 use \php\petstore\Models\Shared\NestedBirdLocationGeography;
 
+$security = new Security();
+$security->key1 = '';
+
 $sdk = Pb::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -106,13 +114,13 @@ try {
     $request->flight->wings->span->amount = 7898.44;
     $request->flight->wings->span->unit = 'katal';
     $request->food = [
-        'digital',
+        'string',
     ];
     $request->id = '<ID>';
     $request->location = [
         new NestedBirdLocation(),
     ];
-    $request->name = 'Anguilla';
+    $request->name = 'string';
 
     $response = $sdk->birds->createNewBird($request);
 
@@ -152,7 +160,11 @@ use \php\petstore\Pb;
 use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Shared\Birds;
 
+$security = new Security();
+$security->key1 = '';
+
 $sdk = Pb::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -198,13 +210,17 @@ use \php\petstore\Pb;
 use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Operations\GetAllLivingThingsRequest;
 
+$security = new Security();
+$security->key1 = '';
+
 $sdk = Pb::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetAllLivingThingsRequest();
     $request->filter = [
-        'qua',
+        'string',
     ];
 
     $response = $sdk->birds->getAllLivingThings($request);

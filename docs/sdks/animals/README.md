@@ -31,7 +31,11 @@ use \php\petstore\Pb;
 use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Operations\CreateAnimalRequestBody;
 
+$security = new Security();
+$security->key1 = '';
+
 $sdk = Pb::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -39,7 +43,7 @@ try {
     $request->age = 239780;
     $request->color = 'maroon';
     $request->id = '<ID>';
-    $request->name = 'Buckinghamshire TLS';
+    $request->name = 'string';
 
     $response = $sdk->animals->createAnimal($request);
 
@@ -81,7 +85,11 @@ use \php\petstore\Models\Shared\ComplexObject;
 use \php\petstore\Models\Shared\ComplexObjectData;
 use \php\petstore\Models\Shared\Animals;
 
+$security = new Security();
+$security->key1 = '';
+
 $sdk = Pb::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -90,11 +98,11 @@ try {
     $request->data->animal = [
         new Animals(),
     ];
-    $request->data->birds = 'Mesquite';
-    $request->data->createdDate = 'joule';
-    $request->data->updatedDate = 'Granite';
-    $request->meta = 'Officer';
-    $request->name = 'Tala female';
+    $request->data->birds = 'string';
+    $request->data->createdDate = 'string';
+    $request->data->updatedDate = 'string';
+    $request->meta = 'string';
+    $request->name = 'string';
 
     $response = $sdk->animals->createLivingThings($request);
 
@@ -134,7 +142,11 @@ use \php\petstore\Pb;
 use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Operations\DeleteAnimalsByIdRequest;
 
+$security = new Security();
+$security->key1 = '';
+
 $sdk = Pb::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -179,15 +191,19 @@ use \php\petstore\Pb;
 use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Operations\GetAllAnimalsRequest;
 
+$security = new Security();
+$security->key1 = '';
+
 $sdk = Pb::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetAllAnimalsRequest();
-    $request->age = 'Avon';
-    $request->color = 'turquoise';
+    $request->age = 'string';
+    $request->color = 'pink';
     $request->id = '<ID>';
-    $request->name = 'plum';
+    $request->name = 'string';
 
     $response = $sdk->animals->getAllAnimals($request);
 
@@ -227,13 +243,17 @@ use \php\petstore\Pb;
 use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Operations\GetAllLivingThingsRequest;
 
+$security = new Security();
+$security->key1 = '';
+
 $sdk = Pb::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetAllLivingThingsRequest();
     $request->filter = [
-        'qua',
+        'string',
     ];
 
     $response = $sdk->animals->getAllLivingThings($request);
@@ -275,7 +295,11 @@ use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Operations\GetAnimalsByIdRequest;
 use \php\petstore\Models\Shared\Animals;
 
+$security = new Security();
+$security->key1 = '';
+
 $sdk = Pb::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -284,9 +308,9 @@ try {
     $request->animals->age = 942154;
     $request->animals->color = 'plum';
     $request->animals->id = '<ID>';
-    $request->animals->name = 'enhance product';
+    $request->animals->name = 'string';
     $request->id = '<ID>';
-    $request->perPage = 208636;
+    $request->perPage = 377760;
 
     $response = $sdk->animals->getAnimalsById($request);
 
@@ -327,7 +351,11 @@ use \php\petstore\Models\Shared\Security;
 use \php\petstore\Models\Operations\UpdateAnimalsByIdRequest;
 use \php\petstore\Models\Shared\Animals;
 
+$security = new Security();
+$security->key1 = '';
+
 $sdk = Pb::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -336,7 +364,7 @@ try {
     $request->animals->age = 15412;
     $request->animals->color = 'ivory';
     $request->animals->id = '<ID>';
-    $request->animals->name = 'index Elizabeth Fish';
+    $request->animals->name = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->animals->updateAnimalsById($request);
