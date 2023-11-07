@@ -10,12 +10,12 @@ namespace php\petstore\Models\Operations;
 
 
 /**
- * CreateNewBird200ApplicationJSON - OK
+ * CreateNewBirdResponseBody - OK
  * 
  * @package php\petstore\Models\Operations
  * @access public
  */
-class CreateNewBird200ApplicationJSON
+class CreateNewBirdResponseBody
 {
 	#[\JMS\Serializer\Annotation\SerializedName('data')]
     #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\NestedBird')]
@@ -23,9 +23,9 @@ class CreateNewBird200ApplicationJSON
     public ?\php\petstore\Models\Shared\NestedBird $data = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('meta')]
-    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Operations\CreateNewBird200ApplicationJSONMeta')]
+    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Operations\Meta')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?CreateNewBird200ApplicationJSONMeta $meta = null;
+    public ?Meta $meta = null;
     
 	public function __construct()
 	{

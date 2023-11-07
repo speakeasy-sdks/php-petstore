@@ -12,14 +12,14 @@ namespace php\petstore\Models\Shared;
 class NestedBird
 {
 	#[\JMS\Serializer\Annotation\SerializedName('age')]
-    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\NestedBirdAge')]
+    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\Age')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NestedBirdAge $age = null;
+    public ?Age $age = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('flight')]
-    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\NestedBirdFlight')]
+    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\Flight')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NestedBirdFlight $flight = null;
+    public ?Flight $flight = null;
     
     /**
      * $food
@@ -39,10 +39,10 @@ class NestedBird
     /**
      * $location
      * 
-     * @var ?array<\php\petstore\Models\Shared\NestedBirdLocation> $location
+     * @var ?array<\php\petstore\Models\Shared\Location> $location
      */
 	#[\JMS\Serializer\Annotation\SerializedName('location')]
-    #[\JMS\Serializer\Annotation\Type('array<php\petstore\Models\Shared\NestedBirdLocation>')]
+    #[\JMS\Serializer\Annotation\Type('array<php\petstore\Models\Shared\Location>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $location = null;
     

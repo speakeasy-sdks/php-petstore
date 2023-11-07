@@ -38,16 +38,16 @@ class GetAllLivingThingsResponse
     /**
      * OK
      * 
-     * @var mixed $getAllLivingThings200ApplicationJSONOneOf
+     * @var mixed $oneOf
      */
 	
-    public mixed $getAllLivingThings200ApplicationJSONOneOf = null;
+    public mixed $oneOf = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->getAllLivingThings200ApplicationJSONOneOf = null;
+		$this->oneOf = null;
 	}
 }

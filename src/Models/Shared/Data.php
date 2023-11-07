@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace php\petstore\Models\Shared;
 
 
-class ComplexObjectData
+class Data
 {
     /**
      * $animal

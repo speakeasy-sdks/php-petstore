@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace php\petstore\Models\Shared;
 
 
-class NestedBirdAge
+class Age
 {
 	#[\JMS\Serializer\Annotation\SerializedName('amount')]
     #[\JMS\Serializer\Annotation\Type('float')]
@@ -17,12 +17,12 @@ class NestedBirdAge
     public ?float $amount = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('unit')]
-    #[\JMS\Serializer\Annotation\Type('enum<php\petstore\Models\Shared\NestedBirdAgeUnit>')]
-    public NestedBirdAgeUnit $unit;
+    #[\JMS\Serializer\Annotation\Type('enum<php\petstore\Models\Shared\Unit>')]
+    public Unit $unit;
     
 	public function __construct()
 	{
 		$this->amount = null;
-		$this->unit = \php\petstore\Models\Shared\NestedBirdAgeUnit::Months;
+		$this->unit = \php\petstore\Models\Shared\Unit::Months;
 	}
 }

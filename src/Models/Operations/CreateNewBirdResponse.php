@@ -38,16 +38,16 @@ class CreateNewBirdResponse
     /**
      * OK
      * 
-     * @var ?\php\petstore\Models\Operations\CreateNewBird200ApplicationJSON $createNewBird200ApplicationJSONObject
+     * @var ?\php\petstore\Models\Operations\CreateNewBirdResponseBody $object
      */
 	
-    public ?CreateNewBird200ApplicationJSON $createNewBird200ApplicationJSONObject = null;
+    public ?CreateNewBirdResponseBody $object = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->createNewBird200ApplicationJSONObject = null;
+		$this->object = null;
 	}
 }

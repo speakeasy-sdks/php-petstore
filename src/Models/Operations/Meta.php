@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace php\petstore\Models\Operations;
 
 
-class CreateNewBird200ApplicationJSONMeta
+class Meta
 {
 	#[\JMS\Serializer\Annotation\SerializedName('pagination')]
     #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\Pagination')]

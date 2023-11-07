@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace php\petstore\Models\Shared;
 
 
-enum NestedBirdAgeUnit: string
+enum Unit: string
 {
     case Months = 'months';
     case Years = 'years';

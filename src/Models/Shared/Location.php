@@ -9,12 +9,12 @@ declare(strict_types=1);
 namespace php\petstore\Models\Shared;
 
 
-class NestedBirdLocation
+class Location
 {
 	#[\JMS\Serializer\Annotation\SerializedName('geography')]
-    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\NestedBirdLocationGeography')]
+    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\Geography')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NestedBirdLocationGeography $geography = null;
+    public ?Geography $geography = null;
     
 	public function __construct()
 	{

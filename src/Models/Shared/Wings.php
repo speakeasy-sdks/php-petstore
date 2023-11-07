@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace php\petstore\Models\Shared;
 
 
-class NestedBirdFlightWings
+class Wings
 {
 	#[\JMS\Serializer\Annotation\SerializedName('count')]
     #[\JMS\Serializer\Annotation\Type('int')]
@@ -17,9 +17,9 @@ class NestedBirdFlightWings
     public ?int $count = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('span')]
-    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\NestedBirdFlightWingsSpan')]
+    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\Span')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NestedBirdFlightWingsSpan $span = null;
+    public ?Span $span = null;
     
 	public function __construct()
 	{

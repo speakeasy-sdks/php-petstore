@@ -36,19 +36,19 @@ composer update
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use php\petstore\Pb;
-use php\petstore\Models\Shared\Security;
-use php\petstore\Models\Operations\CreateAnimalRequestBody;
+use php\petstore;
+use php\petstore\Models\Shared;
+use php\petstore\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAnimalRequestBody();
+    $request = new Operations\CreateAnimalRequestBody();
     $request->age = 239780;
     $request->color = 'maroon';
     $request->id = '<ID>';
@@ -70,7 +70,7 @@ try {
 ## Available Resources and Operations
 
 
-### [animals](docs/sdks/animals/README.md)
+### [Animals](docs/sdks/animals/README.md)
 
 * [createAnimal](docs/sdks/animals/README.md#createanimal) - create an animal
 * [createLivingThings](docs/sdks/animals/README.md#createlivingthings) - create a living thing
@@ -80,7 +80,7 @@ try {
 * [getAnimalsById](docs/sdks/animals/README.md#getanimalsbyid) - Get Animal
 * [updateAnimalsById](docs/sdks/animals/README.md#updateanimalsbyid) - Update Animal
 
-### [birds](docs/sdks/birds/README.md)
+### [Birds](docs/sdks/birds/README.md)
 
 * [createLivingThings](docs/sdks/birds/README.md#createlivingthings) - create a living thing
 * [createNewBird](docs/sdks/birds/README.md#createnewbird) - Create new Bird

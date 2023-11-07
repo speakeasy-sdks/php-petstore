@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace php\petstore\Models\Shared;
 
 
-class NestedBirdLocationGeography
+class Geography
 {
 	#[\JMS\Serializer\Annotation\SerializedName('latitude')]
     #[\JMS\Serializer\Annotation\Type('string')]

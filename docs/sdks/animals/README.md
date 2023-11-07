@@ -1,5 +1,5 @@
 # Animals
-(*animals*)
+
 
 ## Overview
 
@@ -27,19 +27,19 @@ Post animals description
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \php\petstore\Pb;
-use \php\petstore\Models\Shared\Security;
-use \php\petstore\Models\Operations\CreateAnimalRequestBody;
+use \php\petstore;
+use \php\petstore\Models\Shared;
+use \php\petstore\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAnimalRequestBody();
+    $request = new Operations\CreateAnimalRequestBody();
     $request->age = 239780;
     $request->color = 'maroon';
     $request->id = '<ID>';
@@ -79,24 +79,21 @@ Create a living thing
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \php\petstore\Pb;
-use \php\petstore\Models\Shared\Security;
-use \php\petstore\Models\Shared\ComplexObject;
-use \php\petstore\Models\Shared\ComplexObjectData;
-use \php\petstore\Models\Shared\Animals;
+use \php\petstore;
+use \php\petstore\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ComplexObject();
-    $request->data = new ComplexObjectData();
+    $request = new Shared\ComplexObject();
+    $request->data = new Shared\Data();
     $request->data->animal = [
-        new Animals(),
+        new Shared\Animals(),
     ];
     $request->data->birds = 'string';
     $request->data->createdDate = 'string';
@@ -138,19 +135,19 @@ Delete the animal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \php\petstore\Pb;
-use \php\petstore\Models\Shared\Security;
-use \php\petstore\Models\Operations\DeleteAnimalsByIdRequest;
+use \php\petstore;
+use \php\petstore\Models\Shared;
+use \php\petstore\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteAnimalsByIdRequest();
+    $request = new Operations\DeleteAnimalsByIdRequest();
     $request->id = '<ID>';
 
     $response = $sdk->animals->deleteAnimalsById($request);
@@ -187,19 +184,19 @@ Get Animals Description
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \php\petstore\Pb;
-use \php\petstore\Models\Shared\Security;
-use \php\petstore\Models\Operations\GetAllAnimalsRequest;
+use \php\petstore;
+use \php\petstore\Models\Shared;
+use \php\petstore\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAllAnimalsRequest();
+    $request = new Operations\GetAllAnimalsRequest();
     $request->age = 'string';
     $request->color = 'pink';
     $request->id = '<ID>';
@@ -207,7 +204,7 @@ try {
 
     $response = $sdk->animals->getAllAnimals($request);
 
-    if ($response->animals !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -239,26 +236,26 @@ get All living things data
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \php\petstore\Pb;
-use \php\petstore\Models\Shared\Security;
-use \php\petstore\Models\Operations\GetAllLivingThingsRequest;
+use \php\petstore;
+use \php\petstore\Models\Shared;
+use \php\petstore\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAllLivingThingsRequest();
+    $request = new Operations\GetAllLivingThingsRequest();
     $request->filter = [
         'string',
     ];
 
     $response = $sdk->animals->getAllLivingThings($request);
 
-    if ($response->getAllLivingThings200ApplicationJSONOneOf !== null) {
+    if ($response->oneOf !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -290,21 +287,20 @@ Get an animal
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \php\petstore\Pb;
-use \php\petstore\Models\Shared\Security;
-use \php\petstore\Models\Operations\GetAnimalsByIdRequest;
-use \php\petstore\Models\Shared\Animals;
+use \php\petstore;
+use \php\petstore\Models\Shared;
+use \php\petstore\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAnimalsByIdRequest();
-    $request->animals = new Animals();
+    $request = new Operations\GetAnimalsByIdRequest();
+    $request->animals = new Shared\Animals();
     $request->animals->age = 942154;
     $request->animals->color = 'plum';
     $request->animals->id = '<ID>';
@@ -346,21 +342,20 @@ Update the animal object
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \php\petstore\Pb;
-use \php\petstore\Models\Shared\Security;
-use \php\petstore\Models\Operations\UpdateAnimalsByIdRequest;
-use \php\petstore\Models\Shared\Animals;
+use \php\petstore;
+use \php\petstore\Models\Shared;
+use \php\petstore\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateAnimalsByIdRequest();
-    $request->animals = new Animals();
+    $request = new Operations\UpdateAnimalsByIdRequest();
+    $request->animals = new Shared\Animals();
     $request->animals->age = 15412;
     $request->animals->color = 'ivory';
     $request->animals->id = '<ID>';

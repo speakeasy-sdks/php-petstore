@@ -1,5 +1,5 @@
 # Birds
-(*birds*)
+
 
 ## Overview
 
@@ -24,24 +24,21 @@ Create a living thing
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \php\petstore\Pb;
-use \php\petstore\Models\Shared\Security;
-use \php\petstore\Models\Shared\ComplexObject;
-use \php\petstore\Models\Shared\ComplexObjectData;
-use \php\petstore\Models\Shared\Animals;
+use \php\petstore;
+use \php\petstore\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ComplexObject();
-    $request->data = new ComplexObjectData();
+    $request = new Shared\ComplexObject();
+    $request->data = new Shared\Data();
     $request->data->animal = [
-        new Animals(),
+        new Shared\Animals(),
     ];
     $request->data->birds = 'string';
     $request->data->createdDate = 'string';
@@ -83,34 +80,26 @@ Create a new Bird
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \php\petstore\Pb;
-use \php\petstore\Models\Shared\Security;
-use \php\petstore\Models\Shared\NestedBird;
-use \php\petstore\Models\Shared\NestedBirdAge;
-use \php\petstore\Models\Shared\NestedBirdAgeUnit;
-use \php\petstore\Models\Shared\NestedBirdFlight;
-use \php\petstore\Models\Shared\NestedBirdFlightWings;
-use \php\petstore\Models\Shared\NestedBirdFlightWingsSpan;
-use \php\petstore\Models\Shared\NestedBirdLocation;
-use \php\petstore\Models\Shared\NestedBirdLocationGeography;
+use \php\petstore;
+use \php\petstore\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new NestedBird();
-    $request->age = new NestedBirdAge();
+    $request = new Shared\NestedBird();
+    $request->age = new Shared\Age();
     $request->age->amount = 5601.46;
-    $request->age->unit = NestedBirdAgeUnit::Years;
-    $request->flight = new NestedBirdFlight();
+    $request->age->unit = Shared\Unit::Years;
+    $request->flight = new Shared\Flight();
     $request->flight->canFly = false;
-    $request->flight->wings = new NestedBirdFlightWings();
+    $request->flight->wings = new Shared\Wings();
     $request->flight->wings->count = 959530;
-    $request->flight->wings->span = new NestedBirdFlightWingsSpan();
+    $request->flight->wings->span = new Shared\Span();
     $request->flight->wings->span->amount = 7898.44;
     $request->flight->wings->span->unit = 'katal';
     $request->food = [
@@ -118,13 +107,13 @@ try {
     ];
     $request->id = '<ID>';
     $request->location = [
-        new NestedBirdLocation(),
+        new Shared\Location(),
     ];
     $request->name = 'string';
 
     $response = $sdk->birds->createNewBird($request);
 
-    if ($response->createNewBird200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -156,25 +145,24 @@ Get All birds
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \php\petstore\Pb;
-use \php\petstore\Models\Shared\Security;
-use \php\petstore\Models\Shared\Birds;
+use \php\petstore;
+use \php\petstore\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
     $request = [
-        new Birds(),
+        new Shared\Birds(),
     ]
 
     $response = $sdk->birds->getAllBirds($request);
 
-    if ($response->birds !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -206,26 +194,26 @@ get All living things data
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \php\petstore\Pb;
-use \php\petstore\Models\Shared\Security;
-use \php\petstore\Models\Operations\GetAllLivingThingsRequest;
+use \php\petstore;
+use \php\petstore\Models\Shared;
+use \php\petstore\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAllLivingThingsRequest();
+    $request = new Operations\GetAllLivingThingsRequest();
     $request->filter = [
         'string',
     ];
 
     $response = $sdk->birds->getAllLivingThings($request);
 
-    if ($response->getAllLivingThings200ApplicationJSONOneOf !== null) {
+    if ($response->oneOf !== null) {
         // handle response
     }
 } catch (Exception $e) {

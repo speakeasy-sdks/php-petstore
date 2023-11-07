@@ -12,9 +12,9 @@ namespace php\petstore\Models\Shared;
 class ComplexObject
 {
 	#[\JMS\Serializer\Annotation\SerializedName('data')]
-    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\ComplexObjectData')]
+    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\Data')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ComplexObjectData $data = null;
+    public ?Data $data = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('meta')]
     #[\JMS\Serializer\Annotation\Type('mixed')]

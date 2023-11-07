@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace php\petstore\Models\Shared;
 
 
-class NestedBirdFlight
+class Flight
 {
 	#[\JMS\Serializer\Annotation\SerializedName('canFly')]
     #[\JMS\Serializer\Annotation\Type('bool')]
@@ -17,9 +17,9 @@ class NestedBirdFlight
     public ?bool $canFly = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('wings')]
-    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\NestedBirdFlightWings')]
+    #[\JMS\Serializer\Annotation\Type('php\petstore\Models\Shared\Wings')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NestedBirdFlightWings $wings = null;
+    public ?Wings $wings = null;
     
 	public function __construct()
 	{

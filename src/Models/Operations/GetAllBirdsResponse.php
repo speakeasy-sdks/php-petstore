@@ -12,14 +12,6 @@ namespace php\petstore\Models\Operations;
 class GetAllBirdsResponse
 {
     /**
-     * OK
-     * 
-     * @var ?array<\php\petstore\Models\Shared\Birds> $birds
-     */
-	
-    public ?array $birds = null;
-    
-    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -51,12 +43,20 @@ class GetAllBirdsResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
+    /**
+     * OK
+     * 
+     * @var ?array<\php\petstore\Models\Shared\Birds> $classes
+     */
+	
+    public ?array $classes = null;
+    
 	public function __construct()
 	{
-		$this->birds = null;
 		$this->contentType = "";
 		$this->error = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->classes = null;
 	}
 }

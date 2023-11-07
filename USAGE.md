@@ -7,19 +7,19 @@
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use php\petstore\Pb;
-use php\petstore\Models\Shared\Security;
-use php\petstore\Models\Operations\CreateAnimalRequestBody;
+use php\petstore;
+use php\petstore\Models\Shared;
+use php\petstore\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->key1 = '';
 
-$sdk = Pb::builder()
+$sdk = petstore\Pb::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateAnimalRequestBody();
+    $request = new Operations\CreateAnimalRequestBody();
     $request->age = 239780;
     $request->color = 'maroon';
     $request->id = '<ID>';
