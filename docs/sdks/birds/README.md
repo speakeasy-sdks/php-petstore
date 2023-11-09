@@ -60,12 +60,12 @@ try {
 
 | Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
 | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `$request`                                                                        | [\php\petstore\Models\Shared\ComplexObject](../../models/shared/ComplexObject.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| `$request`                                                                        | [\php\petstore\Models\Shared\ComplexObject](../../Models/Shared/ComplexObject.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[?\php\petstore\Models\Operations\CreateLivingThingsResponse](../../models/operations/CreateLivingThingsResponse.md)**
+**[?\php\petstore\Models\Operations\CreateLivingThingsResponse](../../Models/Operations/CreateLivingThingsResponse.md)**
 
 
 ## createNewBird
@@ -125,12 +125,12 @@ try {
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `$request`                                                                  | [\php\petstore\Models\Shared\NestedBird](../../models/shared/NestedBird.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| `$request`                                                                  | [\php\petstore\Models\Shared\NestedBird](../../Models/Shared/NestedBird.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 
 ### Response
 
-**[?\php\petstore\Models\Operations\CreateNewBirdResponse](../../models/operations/CreateNewBirdResponse.md)**
+**[?\php\petstore\Models\Operations\CreateNewBirdResponse](../../Models/Operations/CreateNewBirdResponse.md)**
 
 
 ## getAllBirds
@@ -174,12 +174,12 @@ try {
 
 | Parameter                                  | Type                                       | Required                                   | Description                                |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `$request`                                 | [array](../../models//.md)                 | :heavy_check_mark:                         | The request object to use for the request. |
+| `$request`                                 | [array](../../.md)                         | :heavy_check_mark:                         | The request object to use for the request. |
 
 
 ### Response
 
-**[?\php\petstore\Models\Operations\GetAllBirdsResponse](../../models/operations/GetAllBirdsResponse.md)**
+**[?\php\petstore\Models\Operations\GetAllBirdsResponse](../../Models/Operations/GetAllBirdsResponse.md)**
 
 
 ## getAllLivingThings
@@ -225,10 +225,10 @@ try {
 
 | Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\php\petstore\Models\Operations\GetAllLivingThingsRequest](../../models/operations/GetAllLivingThingsRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `$request`                                                                                                        | [\php\petstore\Models\Operations\GetAllLivingThingsRequest](../../Models/Operations/GetAllLivingThingsRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[?\php\petstore\Models\Operations\GetAllLivingThingsResponse](../../models/operations/GetAllLivingThingsResponse.md)**
+**[?\php\petstore\Models\Operations\GetAllLivingThingsResponse](../../Models/Operations/GetAllLivingThingsResponse.md)**
 

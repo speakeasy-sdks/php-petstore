@@ -59,12 +59,12 @@ try {
 
 | Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                    | [\php\petstore\Models\Operations\CreateAnimalRequestBody](../../models/operations/CreateAnimalRequestBody.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| `$request`                                                                                                    | [\php\petstore\Models\Operations\CreateAnimalRequestBody](../../Models/Operations/CreateAnimalRequestBody.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 
 ### Response
 
-**[?\php\petstore\Models\Operations\CreateAnimalResponse](../../models/operations/CreateAnimalResponse.md)**
+**[?\php\petstore\Models\Operations\CreateAnimalResponse](../../Models/Operations/CreateAnimalResponse.md)**
 
 
 ## createLivingThings
@@ -115,12 +115,12 @@ try {
 
 | Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
 | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `$request`                                                                        | [\php\petstore\Models\Shared\ComplexObject](../../models/shared/ComplexObject.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| `$request`                                                                        | [\php\petstore\Models\Shared\ComplexObject](../../Models/Shared/ComplexObject.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[?\php\petstore\Models\Operations\CreateLivingThingsResponse](../../models/operations/CreateLivingThingsResponse.md)**
+**[?\php\petstore\Models\Operations\CreateLivingThingsResponse](../../Models/Operations/CreateLivingThingsResponse.md)**
 
 
 ## deleteAnimalsById
@@ -164,12 +164,12 @@ try {
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\php\petstore\Models\Operations\DeleteAnimalsByIdRequest](../../models/operations/DeleteAnimalsByIdRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `$request`                                                                                                      | [\php\petstore\Models\Operations\DeleteAnimalsByIdRequest](../../Models/Operations/DeleteAnimalsByIdRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[?\php\petstore\Models\Operations\DeleteAnimalsByIdResponse](../../models/operations/DeleteAnimalsByIdResponse.md)**
+**[?\php\petstore\Models\Operations\DeleteAnimalsByIdResponse](../../Models/Operations/DeleteAnimalsByIdResponse.md)**
 
 
 ## getAllAnimals
@@ -216,12 +216,12 @@ try {
 
 | Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                              | [\php\petstore\Models\Operations\GetAllAnimalsRequest](../../models/operations/GetAllAnimalsRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| `$request`                                                                                              | [\php\petstore\Models\Operations\GetAllAnimalsRequest](../../Models/Operations/GetAllAnimalsRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 
 ### Response
 
-**[?\php\petstore\Models\Operations\GetAllAnimalsResponse](../../models/operations/GetAllAnimalsResponse.md)**
+**[?\php\petstore\Models\Operations\GetAllAnimalsResponse](../../Models/Operations/GetAllAnimalsResponse.md)**
 
 
 ## getAllLivingThings
@@ -267,12 +267,12 @@ try {
 
 | Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\php\petstore\Models\Operations\GetAllLivingThingsRequest](../../models/operations/GetAllLivingThingsRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `$request`                                                                                                        | [\php\petstore\Models\Operations\GetAllLivingThingsRequest](../../Models/Operations/GetAllLivingThingsRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[?\php\petstore\Models\Operations\GetAllLivingThingsResponse](../../models/operations/GetAllLivingThingsResponse.md)**
+**[?\php\petstore\Models\Operations\GetAllLivingThingsResponse](../../Models/Operations/GetAllLivingThingsResponse.md)**
 
 
 ## getAnimalsById
@@ -322,12 +322,12 @@ try {
 
 | Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                | [\php\petstore\Models\Operations\GetAnimalsByIdRequest](../../models/operations/GetAnimalsByIdRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| `$request`                                                                                                | [\php\petstore\Models\Operations\GetAnimalsByIdRequest](../../Models/Operations/GetAnimalsByIdRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 
 ### Response
 
-**[?\php\petstore\Models\Operations\GetAnimalsByIdResponse](../../models/operations/GetAnimalsByIdResponse.md)**
+**[?\php\petstore\Models\Operations\GetAnimalsByIdResponse](../../Models/Operations/GetAnimalsByIdResponse.md)**
 
 
 ## updateAnimalsById
@@ -376,10 +376,10 @@ try {
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\php\petstore\Models\Operations\UpdateAnimalsByIdRequest](../../models/operations/UpdateAnimalsByIdRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `$request`                                                                                                      | [\php\petstore\Models\Operations\UpdateAnimalsByIdRequest](../../Models/Operations/UpdateAnimalsByIdRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[?\php\petstore\Models\Operations\UpdateAnimalsByIdResponse](../../models/operations/UpdateAnimalsByIdResponse.md)**
+**[?\php\petstore\Models\Operations\UpdateAnimalsByIdResponse](../../Models/Operations/UpdateAnimalsByIdResponse.md)**
 
