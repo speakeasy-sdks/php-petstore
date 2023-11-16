@@ -2,20 +2,22 @@ configVersion: 1.0.0
 management:
   docChecksum: 2554149823bfd7b4f9664a81d29a1aea
   docVersion: "1.0"
-  speakeasyVersion: 1.116.0
-  generationVersion: 2.185.0
+  speakeasyVersion: 1.120.3
+  generationVersion: 2.192.1
 generation:
   comments: {}
   sdkClassName: PB
   repoURL: https://github.com/speakeasy-sdks/php-petstore.git
+  usageSnippets:
+    optionalPropertyRendering: withExample
 features:
   php:
-    core: 3.1.1
+    core: 3.1.2
     getRequestBodies: 2.81.1
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
 php:
-  version: 2.0.1
+  version: 2.0.2
   imports:
     option: openapi
     paths:
