@@ -12,10 +12,10 @@ use \php\petstore\Utils\SpeakeasyMetadata;
 class Security
 {
 	#[SpeakeasyMetadata('security:scheme=true,type=oauth2,name=Authorization')]
-    public string $key1;
+    public ?string $key1 = null;
     
 	public function __construct()
 	{
-		$this->key1 = "";
+		$this->key1 = null;
 	}
 }

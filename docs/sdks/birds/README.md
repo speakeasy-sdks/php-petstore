@@ -28,14 +28,12 @@ use \php\petstore;
 use \php\petstore\Models\Shared;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = petstore\Pb::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\ComplexObject();
+        $request = new Shared\ComplexObject();
     $request->data = new Shared\Data();
     $request->data->animal = [
         new Shared\Animals(),
@@ -44,7 +42,7 @@ try {
     $request->data->createdDate = 'string';
     $request->data->updatedDate = 'string';
     $request->meta = 'string';
-    $request->name = 'string';
+    $request->name = 'string';;
 
     $response = $sdk->birds->createLivingThings($request);
 
@@ -84,14 +82,12 @@ use \php\petstore;
 use \php\petstore\Models\Shared;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = petstore\Pb::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\NestedBird();
+        $request = new Shared\NestedBird();
     $request->age = new Shared\Age();
     $request->age->amount = 5601.46;
     $request->age->unit = Shared\Unit::Years;
@@ -109,7 +105,7 @@ try {
     $request->location = [
         new Shared\Location(),
     ];
-    $request->name = 'string';
+    $request->name = 'string';;
 
     $response = $sdk->birds->createNewBird($request);
 
@@ -149,16 +145,14 @@ use \php\petstore;
 use \php\petstore\Models\Shared;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = petstore\Pb::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
-    $request = [
+        $request = [
         new Shared\Birds(),
-    ]
+    ];
 
     $response = $sdk->birds->getAllBirds($request);
 
@@ -199,17 +193,15 @@ use \php\petstore\Models\Shared;
 use \php\petstore\Models\Operations;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = petstore\Pb::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAllLivingThingsRequest();
+        $request = new Operations\GetAllLivingThingsRequest();
     $request->filter = [
         'string',
-    ];
+    ];;
 
     $response = $sdk->birds->getAllLivingThings($request);
 

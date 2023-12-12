@@ -10,7 +10,7 @@ use php\petstore\Models\Shared;
 use php\petstore\Models\Operations;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
 $sdk = petstore\Pb::builder()
     ->setSecurity($security)

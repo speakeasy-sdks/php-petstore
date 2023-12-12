@@ -32,18 +32,16 @@ use \php\petstore\Models\Shared;
 use \php\petstore\Models\Operations;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = petstore\Pb::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateAnimalRequestBody();
+        $request = new Operations\CreateAnimalRequestBody();
     $request->age = 239780;
     $request->color = 'maroon';
     $request->id = '<ID>';
-    $request->name = 'string';
+    $request->name = 'string';;
 
     $response = $sdk->animals->createAnimal($request);
 
@@ -83,14 +81,12 @@ use \php\petstore;
 use \php\petstore\Models\Shared;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = petstore\Pb::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\ComplexObject();
+        $request = new Shared\ComplexObject();
     $request->data = new Shared\Data();
     $request->data->animal = [
         new Shared\Animals(),
@@ -99,7 +95,7 @@ try {
     $request->data->createdDate = 'string';
     $request->data->updatedDate = 'string';
     $request->meta = 'string';
-    $request->name = 'string';
+    $request->name = 'string';;
 
     $response = $sdk->animals->createLivingThings($request);
 
@@ -140,15 +136,13 @@ use \php\petstore\Models\Shared;
 use \php\petstore\Models\Operations;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = petstore\Pb::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteAnimalsByIdRequest();
-    $request->id = '<ID>';
+        $request = new Operations\DeleteAnimalsByIdRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->animals->deleteAnimalsById($request);
 
@@ -189,18 +183,16 @@ use \php\petstore\Models\Shared;
 use \php\petstore\Models\Operations;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = petstore\Pb::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAllAnimalsRequest();
+        $request = new Operations\GetAllAnimalsRequest();
     $request->age = 'string';
     $request->color = 'pink';
     $request->id = '<ID>';
-    $request->name = 'string';
+    $request->name = 'string';;
 
     $response = $sdk->animals->getAllAnimals($request);
 
@@ -241,17 +233,15 @@ use \php\petstore\Models\Shared;
 use \php\petstore\Models\Operations;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = petstore\Pb::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAllLivingThingsRequest();
+        $request = new Operations\GetAllLivingThingsRequest();
     $request->filter = [
         'string',
-    ];
+    ];;
 
     $response = $sdk->animals->getAllLivingThings($request);
 
@@ -292,21 +282,19 @@ use \php\petstore\Models\Shared;
 use \php\petstore\Models\Operations;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = petstore\Pb::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAnimalsByIdRequest();
+        $request = new Operations\GetAnimalsByIdRequest();
     $request->animals = new Shared\Animals();
     $request->animals->age = 942154;
     $request->animals->color = 'plum';
     $request->animals->id = '<ID>';
     $request->animals->name = 'string';
     $request->id = '<ID>';
-    $request->perPage = 377760;
+    $request->perPage = 377760;;
 
     $response = $sdk->animals->getAnimalsById($request);
 
@@ -347,20 +335,18 @@ use \php\petstore\Models\Shared;
 use \php\petstore\Models\Operations;
 
 $security = new Shared\Security();
-$security->key1 = '';
+$security->key1 = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = petstore\Pb::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateAnimalsByIdRequest();
+        $request = new Operations\UpdateAnimalsByIdRequest();
     $request->animals = new Shared\Animals();
     $request->animals->age = 15412;
     $request->animals->color = 'ivory';
     $request->animals->id = '<ID>';
     $request->animals->name = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->animals->updateAnimalsById($request);
 
