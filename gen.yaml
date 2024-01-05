@@ -1,21 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 2554149823bfd7b4f9664a81d29a1aea
-  docVersion: "1.0"
-  speakeasyVersion: 1.126.0
-  generationVersion: 2.213.3
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: PB
-  repoURL: https://github.com/speakeasy-sdks/php-petstore.git
   usageSnippets:
     optionalPropertyRendering: withExample
-features:
-  php:
-    core: 3.2.0
-    getRequestBodies: 2.81.1
-    globalSecurity: 2.81.2
-    globalServerURLs: 2.82.1
+  fixes:
+    nameResolutionDec2023: false
 php:
   version: 2.1.0
   imports:
@@ -27,9 +16,7 @@ php:
       shared: Models/Shared
       webhooks: Models/Webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/php-petstore
   maxMethodParams: 0
   namespace: php\petstore
   outputModelSuffix: output
   packageName: php/petstore
-  repoSubDirectory: .
