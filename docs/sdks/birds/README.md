@@ -38,11 +38,11 @@ try {
     $request->data->animal = [
         new Shared\Animals(),
     ];
-    $request->data->birds = 'string';
-    $request->data->createdDate = 'string';
-    $request->data->updatedDate = 'string';
-    $request->meta = 'string';
-    $request->name = 'string';;
+    $request->data->birds = '<value>';
+    $request->data->createdDate = '<value>';
+    $request->data->updatedDate = '<value>';
+    $request->meta = '<value>';
+    $request->name = '<value>';;
 
     $response = $sdk->birds->createLivingThings($request);
 
@@ -99,13 +99,13 @@ try {
     $request->flight->wings->span->amount = 7898.44;
     $request->flight->wings->span->unit = 'katal';
     $request->food = [
-        'string',
+        '<value>',
     ];
-    $request->id = '<ID>';
+    $request->id = '<id>';
     $request->location = [
         new Shared\Location(),
     ];
-    $request->name = 'string';;
+    $request->name = '<value>';;
 
     $response = $sdk->birds->createNewBird($request);
 
@@ -200,7 +200,7 @@ $sdk = petstore\Pb::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\GetAllLivingThingsRequest();
     $request->filter = [
-        'string',
+        '<value>',
     ];;
 
     $response = $sdk->birds->getAllLivingThings($request);

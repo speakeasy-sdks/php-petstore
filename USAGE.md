@@ -20,8 +20,8 @@ try {
     $request = new Operations\CreateAnimalRequestBody();
     $request->age = 239780;
     $request->color = 'maroon';
-    $request->id = '<ID>';
-    $request->name = 'string';
+    $request->id = '<id>';
+    $request->name = '<value>';
 
     $response = $sdk->animals->createAnimal($request);
 

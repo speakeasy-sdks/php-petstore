@@ -40,8 +40,8 @@ try {
         $request = new Operations\CreateAnimalRequestBody();
     $request->age = 239780;
     $request->color = 'maroon';
-    $request->id = '<ID>';
-    $request->name = 'string';;
+    $request->id = '<id>';
+    $request->name = '<value>';;
 
     $response = $sdk->animals->createAnimal($request);
 
@@ -91,11 +91,11 @@ try {
     $request->data->animal = [
         new Shared\Animals(),
     ];
-    $request->data->birds = 'string';
-    $request->data->createdDate = 'string';
-    $request->data->updatedDate = 'string';
-    $request->meta = 'string';
-    $request->name = 'string';;
+    $request->data->birds = '<value>';
+    $request->data->createdDate = '<value>';
+    $request->data->updatedDate = '<value>';
+    $request->meta = '<value>';
+    $request->name = '<value>';;
 
     $response = $sdk->animals->createLivingThings($request);
 
@@ -142,7 +142,7 @@ $sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteAnimalsByIdRequest();
-    $request->id = '<ID>';;
+    $request->id = '<id>';;
 
     $response = $sdk->animals->deleteAnimalsById($request);
 
@@ -189,10 +189,10 @@ $sdk = petstore\Pb::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAllAnimalsRequest();
-    $request->age = 'string';
+    $request->age = '<value>';
     $request->color = 'pink';
-    $request->id = '<ID>';
-    $request->name = 'string';;
+    $request->id = '<id>';
+    $request->name = '<value>';;
 
     $response = $sdk->animals->getAllAnimals($request);
 
@@ -240,7 +240,7 @@ $sdk = petstore\Pb::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\GetAllLivingThingsRequest();
     $request->filter = [
-        'string',
+        '<value>',
     ];;
 
     $response = $sdk->animals->getAllLivingThings($request);
@@ -291,9 +291,9 @@ try {
     $request->animals = new Shared\Animals();
     $request->animals->age = 942154;
     $request->animals->color = 'plum';
-    $request->animals->id = '<ID>';
-    $request->animals->name = 'string';
-    $request->id = '<ID>';
+    $request->animals->id = '<id>';
+    $request->animals->name = '<value>';
+    $request->id = '<id>';
     $request->perPage = 377760;;
 
     $response = $sdk->animals->getAnimalsById($request);
@@ -344,9 +344,9 @@ try {
     $request->animals = new Shared\Animals();
     $request->animals->age = 15412;
     $request->animals->color = 'ivory';
-    $request->animals->id = '<ID>';
-    $request->animals->name = 'string';
-    $request->id = '<ID>';;
+    $request->animals->id = '<id>';
+    $request->animals->name = '<value>';
+    $request->id = '<id>';;
 
     $response = $sdk->animals->updateAnimalsById($request);
 
