@@ -16,11 +16,9 @@ namespace php\petstore;
  */
 class PbBuilder
 {
-    private SDKConfiguration $sdkConfig;
-
-    public function __construct() {
-        $this->sdkConfig = new SDKConfiguration();
-    }
+    public function __construct(
+        private SDKConfiguration $sdkConfig = new SDKConfiguration(),
+    ) {}
 
     /**
      * setClient allows setting a custom Guzzle client for the SDK to make requests with.
@@ -31,6 +29,7 @@ class PbBuilder
     public function setClient(\GuzzleHttp\ClientInterface $client): PbBuilder
     {
         $this->sdkConfig->defaultClient = $client;
+
         return $this;
     }
     
@@ -43,6 +42,7 @@ class PbBuilder
     public function setSecurity(Models\Shared\Security $security): PbBuilder
     {
         $this->sdkConfig->security = $security;
+
         return $this;
     }
     
@@ -56,6 +56,7 @@ class PbBuilder
     public function setServerUrl(string $serverUrl, ?array $params = null): PbBuilder
     {
         $this->sdkConfig->serverUrl = Utils\Utils::templateUrl($serverUrl, $params);
+
         return $this;
     }
     
@@ -68,6 +69,7 @@ class PbBuilder
     public function setServerIndex(int $serverIdx): PbBuilder
     {
         $this->sdkConfig->serverIndex = $serverIdx;
+
         return $this;
     }
     

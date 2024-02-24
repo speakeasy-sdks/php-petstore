@@ -25,7 +25,8 @@ Post animals description
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \php\petstore;
 use \php\petstore\Models\Shared;
@@ -75,7 +76,8 @@ Create a living thing
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \php\petstore;
 use \php\petstore\Models\Shared;
@@ -129,7 +131,8 @@ Delete the animal
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \php\petstore;
 use \php\petstore\Models\Shared;
@@ -176,7 +179,8 @@ Get Animals Description
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \php\petstore;
 use \php\petstore\Models\Shared;
@@ -226,7 +230,8 @@ get All living things data
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \php\petstore;
 use \php\petstore\Models\Shared;
@@ -275,7 +280,8 @@ Get an animal
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \php\petstore;
 use \php\petstore\Models\Shared;
@@ -328,7 +334,8 @@ Update the animal object
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \php\petstore;
 use \php\petstore\Models\Shared;

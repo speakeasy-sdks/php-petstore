@@ -22,7 +22,8 @@ Create a living thing
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \php\petstore;
 use \php\petstore\Models\Shared;
@@ -76,7 +77,8 @@ Create a new Bird
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \php\petstore;
 use \php\petstore\Models\Shared;
@@ -139,7 +141,8 @@ Get All birds
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \php\petstore;
 use \php\petstore\Models\Shared;
@@ -186,7 +189,8 @@ get All living things data
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \php\petstore;
 use \php\petstore\Models\Shared;
