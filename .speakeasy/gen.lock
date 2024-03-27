@@ -3,10 +3,10 @@ id: cfa45abe-3d52-48c1-827e-b5a0444a7f10
 management:
   docChecksum: 2554149823bfd7b4f9664a81d29a1aea
   docVersion: "1.0"
-  speakeasyVersion: internal
-  generationVersion: 2.272.4
-  releaseVersion: 2.1.4
-  configChecksum: 299d8411043816512639591a6bab77e1
+  speakeasyVersion: 1.227.0
+  generationVersion: 2.291.0
+  releaseVersion: 2.1.5
+  configChecksum: 146a4a5118fb803d33f4520bd3329224
   repoURL: https://github.com/speakeasy-sdks/php-petstore.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/php-petstore
@@ -14,7 +14,7 @@ features:
   php:
     core: 3.3.3
     getRequestBodies: 2.81.1
-    globalSecurity: 2.81.4
+    globalSecurity: 2.81.6
     globalServerURLs: 2.82.1
 generatedFiles:
   - src/SDKConfiguration.php
